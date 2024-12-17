@@ -1,3 +1,4 @@
+
 # vNextelecom Survey App Guide
 
 vNextelecom is a call center management system that provides real-time analytics and reporting through two main interfaces: the Dashboard and Reports section.
@@ -130,29 +131,18 @@ Ensure the following tools and dependencies are installed on the user's system:
     
 3.  **Login**:
     
-    -   Use your superuser credentials. If no superuser exists, create one by running:
-        
-        ```bash
-        python manage.py createsuperuser
-        
-        ```
-        
-    -   Follow the prompts to set a **username**, **email**, and **password**.
+    -   Use your superuser credentials. 
 
 ----------
 
 ### 2. Adding Users via the Admin Panel
 
 1.  After logging in, navigate to the **Users** section in the admin panel.
-    
-2.  Click **Add User**:
-    
-    -   Enter the **username** and **password**.
-    -   Optionally, assign superuser status by checking:
-        -   **Staff status** (for admin panel access)
+2.  Save the user. 
+3.  Choose privillage:
+    -   after adding the user ,Optionally, assign superuser status by checking:
         -   **Superuser status** (for full permissions)
-3.  Save the user.
-    
+        - save the user.
 
 ----------
 
@@ -161,48 +151,47 @@ Ensure the following tools and dependencies are installed on the user's system:
 1.  Go to the **Queues** section in the admin panel.
     
 2.  Click **Add Queue**:
-    
-    -   Provide the required details for the queue (e.g., **name** or **description**).
+    -   Provide the rname of the queue.
 3.  **Assign Users**:
-    
-    -   Use the user selection field in the queue form to assign users who will manage or interact with the queue.
+    -   Use the user selection field in the queue form to assign users who will manage or interact using the queue.
 4.  Save the queue.
     
+----------
+ ### **4. Setting Rate Levels**
+ 
+ 1.  Go to the **Levels** section in the admin panel.
+    
+2.  Click **Add Level**: 
+    -   Assagin the rates colums of the data  for rate processing with names such as 
+      ( rate1,rate2,rate3 )  in one level for all the levels .
+3.  Save the levels.
 
+### 5. Running the Server and Accessing the App
+
+   1.  Access the application at:
+
+                  http://127.0.0.1:8000
+   
+   
+     2.  Login View:
+    
+         When accessing the app, the user will first see the **Login View**.
+          Enter valid credentials to log in.
+        
+    3.  Dashboard View :
+            
+         Once logged in, the user will be redirected to the **Dashboard View**.
+          The dashboard provides an overview of the application's data .
+          
+    4. Report view : 
+          -   In the navigation bar, the user can access the **Report View**.
+          -   The **Report View** displays a table containing today's data filtered to show only the user's assigned queues.
+    
+        
+    
+    
+    
+ 
 ----------
 
-### 4. Running the Server and Accessing the App
-
-1.  Ensure the development server is running:
-    
-    ```bash
-    python manage.py runserver
-    
-    ```
-    
-2.  Access the application at:
-    
-    ```
-    http://127.0.0.1:8000
-    
-    ```
-    
-
 ----------
-
-## Notes:
-
--   **Environment Variables**: Use the `python-decouple` library to manage sensitive data like passwords or API keys in an `.env` file.
--   **Production Deployment**:
-    -   Use a WSGI server like **Gunicorn** or **uWSGI**.
-    -   Set up a reverse proxy with **Nginx** for better performance.
--   **Troubleshooting**:
-    -   Check errors in the **logs/** directory or refer to the debug output on the terminal.
-
-----------
-
-For further assistance, contact the development team.
-
----
-
-For further assistance, contact the development team.
