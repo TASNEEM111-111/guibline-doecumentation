@@ -169,15 +169,16 @@ Ensure the following tools and dependencies are installed on the user's system:
 ### 5. Running the Server and Accessing the App
 
    1.  Access the application at:  http://127.0.0.1:8000
-     2.  Login View:
+      
+   2.  Login View:
          When accessing the app, the user will first see the **Login View**.
           Enter valid credentials to log in.
         
-    3.  Dashboard View : 
+   3.  Dashboard View : 
          Once logged in, the user will be redirected to the **Dashboard View**.
           The dashboard provides an overview of the application's data .
           
-    4. Report view : 
+   4. Report view : 
           -   In the navigation bar, the user can access the **Report View**.
           -   The **Report View** displays a table containing today's data filtered to show only the user's assigned queues.
     
